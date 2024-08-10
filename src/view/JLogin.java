@@ -4,15 +4,9 @@
  */
 package view;
 
-/**
- *
- * @author vovig
- */
-public class JLogin extends javax.swing.JFrame {
+import javax.swing.JOptionPane;
 
-    /**
-     * Creates new form JLogin
-     */
+public class JLogin extends javax.swing.JFrame {
     public JLogin() {
         initComponents();
     }
@@ -29,18 +23,18 @@ public class JLogin extends javax.swing.JFrame {
         label1 = new java.awt.Label();
         formulario = new javax.swing.JPanel();
         titulo = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        log = new javax.swing.JLabel();
+        in = new javax.swing.JLabel();
         inputs = new javax.swing.JPanel();
         email = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        labelEmail = new javax.swing.JLabel();
         senha = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
+        labelSenha = new javax.swing.JLabel();
         jPasswordField2 = new javax.swing.JPasswordField();
         forgot = new javax.swing.JPanel();
         jCheckBox2 = new javax.swing.JCheckBox();
-        jLabel3 = new javax.swing.JLabel();
+        labelForgot = new javax.swing.JLabel();
         buttons = new javax.swing.JPanel();
         cadastrarGoogle = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
@@ -69,13 +63,13 @@ public class JLogin extends javax.swing.JFrame {
         titulo.setForeground(new java.awt.Color(89, 76, 71));
         titulo.setPreferredSize(new java.awt.Dimension(400, 80));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(242, 174, 48));
-        jLabel1.setText("Log");
+        log.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        log.setForeground(new java.awt.Color(242, 174, 48));
+        log.setText("Log");
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(240, 141, 50));
-        jLabel7.setText("in");
+        in.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        in.setForeground(new java.awt.Color(240, 141, 50));
+        in.setText("in");
 
         javax.swing.GroupLayout tituloLayout = new javax.swing.GroupLayout(titulo);
         titulo.setLayout(tituloLayout);
@@ -83,9 +77,9 @@ public class JLogin extends javax.swing.JFrame {
             tituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tituloLayout.createSequentialGroup()
                 .addContainerGap(150, Short.MAX_VALUE)
-                .addComponent(jLabel1)
+                .addComponent(log)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel7)
+                .addComponent(in)
                 .addGap(150, 150, 150))
         );
         tituloLayout.setVerticalGroup(
@@ -93,8 +87,8 @@ public class JLogin extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tituloLayout.createSequentialGroup()
                 .addContainerGap(26, Short.MAX_VALUE)
                 .addGroup(tituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel7))
+                    .addComponent(log)
+                    .addComponent(in))
                 .addContainerGap())
         );
 
@@ -114,9 +108,9 @@ public class JLogin extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(242, 220, 194));
-        jLabel2.setText("Email");
+        labelEmail.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        labelEmail.setForeground(new java.awt.Color(242, 220, 194));
+        labelEmail.setText("Email");
 
         javax.swing.GroupLayout emailLayout = new javax.swing.GroupLayout(email);
         email.setLayout(emailLayout);
@@ -124,14 +118,14 @@ public class JLogin extends javax.swing.JFrame {
             emailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
             .addGroup(emailLayout.createSequentialGroup()
-                .addComponent(jLabel2)
+                .addComponent(labelEmail)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         emailLayout.setVerticalGroup(
             emailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(emailLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2)
+                .addComponent(labelEmail)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
                 .addContainerGap())
@@ -142,9 +136,9 @@ public class JLogin extends javax.swing.JFrame {
         senha.setBackground(new java.awt.Color(82, 58, 53));
         senha.setPreferredSize(new java.awt.Dimension(300, 80));
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(242, 220, 194));
-        jLabel4.setText("Senha");
+        labelSenha.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        labelSenha.setForeground(new java.awt.Color(242, 220, 194));
+        labelSenha.setText("Senha");
 
         jPasswordField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -158,14 +152,14 @@ public class JLogin extends javax.swing.JFrame {
             senhaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPasswordField2, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
             .addGroup(senhaLayout.createSequentialGroup()
-                .addComponent(jLabel4)
+                .addComponent(labelSenha)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         senhaLayout.setVerticalGroup(
             senhaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, senhaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel4)
+                .addComponent(labelSenha)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPasswordField2, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
                 .addContainerGap())
@@ -185,10 +179,10 @@ public class JLogin extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(242, 220, 194));
-        jLabel3.setText("Esqueci minha senha");
-        jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        labelForgot.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        labelForgot.setForeground(new java.awt.Color(242, 220, 194));
+        labelForgot.setText("Esqueci minha senha");
+        labelForgot.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout forgotLayout = new javax.swing.GroupLayout(forgot);
         forgot.setLayout(forgotLayout);
@@ -197,7 +191,7 @@ public class JLogin extends javax.swing.JFrame {
             .addGroup(forgotLayout.createSequentialGroup()
                 .addComponent(jCheckBox2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
-                .addComponent(jLabel3))
+                .addComponent(labelForgot))
         );
         forgotLayout.setVerticalGroup(
             forgotLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -205,7 +199,7 @@ public class JLogin extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(forgotLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCheckBox2)
-                    .addComponent(jLabel3)))
+                    .addComponent(labelForgot)))
         );
 
         inputs.add(forgot);
@@ -336,7 +330,13 @@ public class JLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBox2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        if(jTextField1.getText() != null && !jTextField1.getText().isEmpty() &&
+           jPasswordField2.getText() != null && !jPasswordField2.getText().isEmpty())
+        {    
+            JOptionPane.showMessageDialog(jButton1, "Informações válidas!");
+        } else {
+            JOptionPane.showMessageDialog(jButton1, "Verifique as informações", "Aviso", JOptionPane.WARNING_MESSAGE);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -391,20 +391,20 @@ public class JLogin extends javax.swing.JFrame {
     private javax.swing.JPanel forgot;
     private javax.swing.JPanel formulario;
     private javax.swing.JLabel imagem;
+    private javax.swing.JLabel in;
     private javax.swing.JPanel inputs;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JTextField jTextField1;
     private java.awt.Label label1;
+    private javax.swing.JLabel labelEmail;
+    private javax.swing.JLabel labelForgot;
+    private javax.swing.JLabel labelSenha;
+    private javax.swing.JLabel log;
     private javax.swing.JPanel senha;
     private javax.swing.JPanel signin;
     private javax.swing.JPanel titulo;
